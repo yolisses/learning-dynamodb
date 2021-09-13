@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "aws-sdk": "^2.988.0",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "nodemon": "^2.0.12"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js"
+  }
+}
