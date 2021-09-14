@@ -3,6 +3,7 @@ type User {
   id: ID! 
   name: String
   email: String
+
 }
 
 input UserInput {
@@ -41,6 +42,7 @@ input PlantInput{
 type Query {
   getUser(id: ID!): User
   getPlant(id: ID!): Plant
+  getAllPlants: [Plant!]!
 }
 
 type Mutation {

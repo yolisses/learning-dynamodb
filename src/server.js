@@ -9,6 +9,7 @@ import { createUser } from './user/createUser.js';
 import { createPlant } from './plant/createPlant.js';
 import { configureAWS } from './aws/configureAWS.js';
 import { authMiddleware } from './user/authMiddleware.js';
+import { getAllPlants } from './plant/getAllPlants.js';
 
 configureAWS();
 
@@ -17,6 +18,7 @@ const root = {
   createUser,
   getPlant,
   createPlant,
+  getAllPlants,
 };
 
 const app = express();
