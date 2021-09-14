@@ -12,11 +12,5 @@ export async function generateUploadUrl() {
     Bucket: bucketName,
   });
 
-  try {
-    const uploadUrl = await s3.getSignedUrlPromise('putObject', params);
-    console.log('uploadUrl');
-    return uploadUrl;
-  } catch (err) {
-    console.error(err);
-  }
+  return s3.getSignedUrlPromise('putObject', params);
 }
