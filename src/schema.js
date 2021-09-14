@@ -3,7 +3,8 @@ type User {
   id: ID! 
   name: String
   email: String
-
+  image: String
+  thumbnail: String
 }
 
 input UserInput {
@@ -45,6 +46,7 @@ type Query {
   getPlant(id: ID!): Plant
   getAllPlants: [Plant!]!
   getUploadUrl: String
+  authenticateWithGoogle(token: String): User
 }
 
 type Mutation {

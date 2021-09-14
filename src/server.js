@@ -13,6 +13,7 @@ import { authMiddleware } from './user/authMiddleware.js';
 import { getAllPlants } from './plant/getAllPlants.js';
 import { getUploadUrl } from './upload/getUploadUrl.js';
 import { createTablesIfNotExist } from './database/createTablesIfNotExist.js';
+import { authenticateWithGoogle } from './auth/authenticateWithGoogle.js';
 
 configureAWS();
 createTablesIfNotExist();
@@ -24,6 +25,7 @@ const root = {
   createPlant,
   getAllPlants,
   getUploadUrl,
+  authenticateWithGoogle,
 };
 
 const app = express();

@@ -5,6 +5,9 @@
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-graphql": "^0.12.0",
+    "firebase-admin": "^9.11.1",
+    "firebase-functions": "^3.15.5",
+    "google-auth-library": "^7.9.1",
     "graphql": "^15.5.3",
     "jsonwebtoken": "^8.5.1"
   },
@@ -16,6 +19,7 @@
   },
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/server.js"
+    "dev": "GOOGLE_APPLICATION_CREDENTIALS=./config/firebase.json nodemon src/server.js",
+    "devDb": "docker-compose -f docker-compose-db.yml up"
   }
 }

@@ -7,7 +7,9 @@ export async function createPlant({ input }, req) {
   const docClient = new AWS.DynamoDB.DocumentClient();
   const id = generateRandomId();
 
-  const newItem = { id, ...input, userId: req.user.id };
+  const newItem = {
+    id, ...input, userId: req.user.id, card: 'https://plantei.s3.sa-east-1.amazonaws.com/items/card/0.webp',
+  };
 
   const params = {
     TableName: 'Plants',
