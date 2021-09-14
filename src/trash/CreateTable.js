@@ -8,7 +8,7 @@ AWS.config.update({
 const dynamodb = new AWS.DynamoDB();
 
 const params = {
-  TableName: 'Users',
+  TableName: 'Plants',
   KeySchema: [
     { AttributeName: 'id', KeyType: 'HASH' }, // Partition key
   ],

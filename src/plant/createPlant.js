@@ -8,7 +8,7 @@ export async function createPlant(input) {
   const newItem = { id, ...input };
 
   const params = {
-    TableName: 'Users',
+    TableName: 'Plants',
     Item: newItem,
   };
 
