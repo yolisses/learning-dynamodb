@@ -1,3 +1,4 @@
+import './dotenv/initializeDotEnv.js';
 import express from 'express';
 import { graphqlHTTP } from 'express-graphql';
 import { buildSchema } from 'graphql';
@@ -10,6 +11,7 @@ import { createPlant } from './plant/createPlant.js';
 import { configureAWS } from './aws/configureAWS.js';
 import { authMiddleware } from './user/authMiddleware.js';
 import { getAllPlants } from './plant/getAllPlants.js';
+import { getUploadUrl } from './upload/getUploadUrl.js';
 
 configureAWS();
 
@@ -19,6 +21,7 @@ const root = {
   getPlant,
   createPlant,
   getAllPlants,
+  getUploadUrl,
 };
 
 const app = express();

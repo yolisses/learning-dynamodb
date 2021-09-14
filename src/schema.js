@@ -43,6 +43,7 @@ type Query {
   getUser(id: ID!): User
   getPlant(id: ID!): Plant
   getAllPlants: [Plant!]!
+  getUploadUrl: String
 }
 
 type Mutation {
