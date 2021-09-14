@@ -1,7 +1,7 @@
 import AWS from 'aws-sdk';
 import { generateRandomId } from '../utils/generateRandomId.js';
 
-export async function createUser({ name, email }) {
+export async function createUser({ input: { name, email } }) {
   const docClient = new AWS.DynamoDB.DocumentClient();
   const id = generateRandomId();
 

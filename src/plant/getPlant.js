@@ -1,6 +1,6 @@
 import AWS from 'aws-sdk';
 
-export async function getPlant(id) {
+export async function getPlant({ id }) {
   const docClient = new AWS.DynamoDB.DocumentClient();
 
   const params = {
