@@ -14,6 +14,7 @@ input UserInput {
 type Plant{
   name: String!
   id: ID!
+  card: String
   userId: ID!
   images: [String!]!
   type: String!
