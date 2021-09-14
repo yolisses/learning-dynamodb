@@ -12,8 +12,10 @@ import { configureAWS } from './aws/configureAWS.js';
 import { authMiddleware } from './user/authMiddleware.js';
 import { getAllPlants } from './plant/getAllPlants.js';
 import { getUploadUrl } from './upload/getUploadUrl.js';
+import { createTablesIfNotExist } from './database/createTablesIfNotExist.js';
 
 configureAWS();
+createTablesIfNotExist();
 
 const root = {
   getUser,

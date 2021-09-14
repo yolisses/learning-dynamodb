@@ -1,0 +1,8 @@
+dynamodb:
+  image: amazon/dynamodb-local:latest
+  command: -jar DynamoDBLocal.jar -sharedDb -dbPath /var/lib/dynamodb/data
+  volumes:
+      - "./dynamo_data:/var/lib/dynamodb/data"
+  ports:
+      - "8000:8000"
+  user: root
