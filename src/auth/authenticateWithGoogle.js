@@ -1,4 +1,4 @@
-import { getUser } from '../user/getUser copy.js';
+import { getUser } from '../user/getUser.js';
 import { createUser } from '../user/createUser.js';
 import { getEmailUser } from '../user/getEmailUser.js';
 
