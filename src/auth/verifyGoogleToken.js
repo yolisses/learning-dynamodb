@@ -7,11 +7,8 @@ export async function verifyGoogleToken(token) {
     if (!token) {
       return false;
     }
-    const payload = await admin.auth().verifyIdToken(token);
-    console.error(payload);
-    return payload !== null;
+    return await admin.auth().verifyIdToken(token);
   } catch (err) {
-    console.error(err);
     return false;
   }
 }

@@ -38,4 +38,17 @@ export const tables = [
       WriteCapacityUnits: 10,
     },
   },
+  {
+    TableName: 'UsedEmails',
+    KeySchema: [
+      { AttributeName: 'email', KeyType: 'HASH' },
+    ],
+    AttributeDefinitions: [
+      { AttributeName: 'email', AttributeType: 'S' },
+    ],
+    ProvisionedThroughput: {
+      ReadCapacityUnits: 10,
+      WriteCapacityUnits: 10,
+    },
+  },
 ];
