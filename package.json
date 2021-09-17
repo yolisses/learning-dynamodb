@@ -20,6 +20,6 @@
   "type": "module",
   "scripts": {
     "dev": "GOOGLE_APPLICATION_CREDENTIALS=./config/firebase.json nodemon src/server.js",
-    "devDb": "docker-compose -f docker-compose-db.yml up"
+    "devDb": "docker-compose -f docker-compose-db.yml up -d"
   }
 }
