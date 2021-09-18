@@ -21,9 +21,9 @@ type Plant{
   type: String!
   tags: [String!]
   description: String
-  donate: Boolean
-  swap: Boolean
-  sell: Boolean
+  donate: Boolean!
+  swap: Boolean!
+  sell: Boolean!
   price: Float
   amount: Int
 }
@@ -34,9 +34,8 @@ input PlantInput{
   type: String!
   tags: [String!]
   description: String
-  donate: Boolean
-  swap: Boolean
-  sell: Boolean
+  donate: Boolean!
+  swap: Boolean!
   price: Float
   amount: Int
 }
