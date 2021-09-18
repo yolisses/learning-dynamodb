@@ -8,7 +8,7 @@ export async function generateUploadUrl() {
 
   const params = ({
     Expires: 60,
-    Key: imageName,
+    Key: `items/original/${imageName}.jpg`,
     Bucket: bucketName,
   });
 
