@@ -42,6 +42,7 @@ input PlantInput{
 }
 
 type Query {
+  ping:String
   getUser(id: ID!): User
   getPlant(id: ID!): Plant
   getAllPlants: [Plant!]!
@@ -50,6 +51,7 @@ type Query {
 }
 
 type Mutation {
+  counter(value: Int): Int
   createUser(input: UserInput): User
   createPlant(input: PlantInput): Plant
 }`;

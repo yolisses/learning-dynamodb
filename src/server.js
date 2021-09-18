@@ -14,11 +14,15 @@ import { getAllPlants } from './plant/getAllPlants.js';
 import { getUploadUrl } from './upload/getUploadUrl.js';
 import { createTablesIfNotExist } from './database/createTablesIfNotExist.js';
 import { authenticateWithGoogle } from './auth/authenticateWithGoogle.js';
+import { ping } from './ping.js';
+import { counter } from './counter.js';
 
 configureAWS();
 createTablesIfNotExist();
 
 const root = {
+  ping,
+  counter,
   getUser,
   createUser,
   getPlant,
